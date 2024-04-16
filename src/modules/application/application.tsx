@@ -7,6 +7,7 @@ import { useGeographic } from "ol/proj";
 import Layer from "ol/layer/Layer";
 import TileLayer from "ol/layer/Tile";
 import { OSM } from "ol/source";
+import { KommuneLayerCheckbox } from "../kommuner/kommuneLayerCheckbox";
 
 useGeographic();
 
@@ -42,6 +43,7 @@ export function Application() {
         <a href={"#"} onClick={handleFocusUser}>
           Min posisjon
         </a>
+        <KommuneLayerCheckbox />
       </nav>
       <main>
         <div ref={mapRef}></div>

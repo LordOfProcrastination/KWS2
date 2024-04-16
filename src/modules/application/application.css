@@ -1,0 +1,33 @@
+* {
+  margin: unset;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  height: 100dvh;
+}
+header h1 {
+  text-align: center;
+  margin: 5px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+}
+
+nav {
+  display: flex;
+  gap: 1em;
+  margin: 5px 10px 5px 10px;
+  a {
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 1px gray;
+    margin-bottom: 4px;
+  }
+}

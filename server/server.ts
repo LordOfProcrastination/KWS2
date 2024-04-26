@@ -20,11 +20,13 @@ app.get(
     );
     res.json({
       type: "FeatureCollection",
-      features: result.rows.map(({ kommunenummer, kommunenavn, geometry }) => ({
-        type: "Feature",
-        geometry,
-        properties: { kommunenummer, kommunenavn },
-      })),
+      features: result.rows.map(
+        ({ kommunenummer: number, kommunenavn: string, geometry: any }) => ({
+          type: "Feature",
+          geometry: any,
+          properties: { kommunenummer: number, kommunenavn: string },
+        }),
+      ),
     });
   },
 );

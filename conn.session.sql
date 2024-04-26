@@ -1,1 +1,0 @@
-create index kommune_omrade on kommuner using gist(omrade);

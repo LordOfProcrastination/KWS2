@@ -13,7 +13,7 @@ app.get(
   "/api/kommuner",
   async (req: express.Request, res: express.Response) => {
     const result = await postgresql.query(
-      "select kommunenummer, kommunenavn, st_simplify(st_transform(omrade, 4326), 0.001)::json as geometry from kommuner"
+      "select kommunenummer, kommunenavn, st_simplify(st_transform(omrade, 4326), 0.001)::json as geometry from kommuner",
     );
     res.json({
       type: "FeatureCollection",
@@ -22,10 +22,10 @@ app.get(
           type: "Feature",
           geometry: any,
           properties: { kommunenummer: number, kommunenavn: string },
-        })
+        }),
       ),
     });
-  }
+  },
 );
 
 app.listen(3000);

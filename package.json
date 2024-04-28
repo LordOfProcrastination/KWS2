@@ -10,6 +10,7 @@
   "scripts": {
     "database:load:kommuner": "docker exec -i /postgis /usr/bin/psql --user postgres norway_data < tmp/Basisdata_0000_Norge_25833_Kommuner_PostGIS.sql",
     "dev": "vite",
+    "test": "ts-node-dev server.ts",
     "build": "npm test && vite build",
     "check": "prettier --check . && tsc --noEmit",
     "prepare": "husky",
